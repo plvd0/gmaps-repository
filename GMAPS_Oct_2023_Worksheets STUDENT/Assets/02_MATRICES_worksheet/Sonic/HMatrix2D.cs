@@ -190,4 +190,22 @@ public class HMatrix2D
             }
         };
     }
+
+    public void SetRotationMatrix(float rotDeg)
+    {
+        SetIdentity();
+        float rad = rotDeg * Mathf.Deg2Rad;
+
+        Entries[0, 0] = Mathf.Cos(rad);
+        Entries[0, 1] = -Mathf.Sin(rad);
+        Entries[1, 0] = Mathf.Sin(rad);
+        Entries[1, 1] = Mathf.Cos(rad);
+    }
+
+    public void SetTranslationMatrix(float transX, float transY)
+    {
+        SetIdentity();
+        Entries[0, 2] = transX;
+        Entries[1, 2] = transY;
+    }
 }
