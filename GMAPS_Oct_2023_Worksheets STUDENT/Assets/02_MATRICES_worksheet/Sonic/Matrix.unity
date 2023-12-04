@@ -251,6 +251,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &754830347 stripped
+MeshFilter:
+  m_CorrespondingSourceObject: {fileID: 3800616816674248108, guid: ce266d2ca2c685444ad1522285b0c6e7, type: 3}
+  m_PrefabInstance: {fileID: 849444639}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &849444639
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -267,6 +272,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sonic
       objectReference: {fileID: 0}
+    - target: {fileID: 3800616816674248105, guid: ce266d2ca2c685444ad1522285b0c6e7, type: 3}
+      propertyPath: meshFilter
+      value: 
+      objectReference: {fileID: 754830347}
     - target: {fileID: 3800616816674248109, guid: ce266d2ca2c685444ad1522285b0c6e7, type: 3}
       propertyPath: m_RootOrder
       value: 3

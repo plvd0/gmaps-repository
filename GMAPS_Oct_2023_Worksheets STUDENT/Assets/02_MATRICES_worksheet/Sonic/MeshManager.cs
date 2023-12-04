@@ -14,7 +14,7 @@ using UnityEngine;
 
 public class MeshManager : MonoBehaviour
 {
-    private MeshFilter meshFilter;
+    public MeshFilter meshFilter;
 
     [HideInInspector]
     public Mesh originalMesh, clonedMesh;
@@ -38,4 +38,3 @@ public class MeshManager : MonoBehaviour
         triangles = clonedMesh.triangles;
     }
 }
-
