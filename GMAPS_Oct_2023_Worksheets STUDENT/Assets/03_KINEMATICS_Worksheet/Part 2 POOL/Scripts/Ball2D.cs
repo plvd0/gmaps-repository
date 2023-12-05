@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.Remoting.Messaging;
 using UnityEngine;
 
 public class Ball2D : MonoBehaviour
@@ -22,17 +23,17 @@ public class Ball2D : MonoBehaviour
         Radius = local_sprite_size.x / 2f;
     }
 
-    //public bool IsCollidingWith(float x, float y)
-    //{
-    //    //float distance = /*your code here*/;
-    //    //return distance <= Radius;
-    //}
+    public bool IsCollidingWith(float x, float y)
+    {
+        float distance = Util.FindDistance(new HVector2D(x, y), new HVector2D(Position.x, Position.y));
+        return distance <= Radius;
+    }
 
-    //public bool IsCollidingWith(Ball2D other)
-    //{
-    //    //float distance = Util.FindDistance(Position, other.Position);
-    //    //return distance <= Radius + other.Radius;
-    //}
+    public bool IsCollidingWith(Ball2D other)
+    {
+        float distance = Util.FindDistance(Position, other.Position);
+        return distance <= Radius + other.Radius;
+    }
 
     public void FixedUpdate()
     {
@@ -41,12 +42,12 @@ public class Ball2D : MonoBehaviour
 
     private void UpdateBall2DPhysics(float deltaTime)
     {
-        //float displacementX = /*your code here*/;
-        //float displacementY = /*your code here*/;
+        float displacementX = Velocity.x * deltaTime;
+        float displacementY = Velocity.y * deltaTime;
 
-        //Position.x += /*your code here*/;
-        //Position.y += /*your code here*/;
+        Position.x += displacementX;
+        Position.y += displacementY;
 
-        //transform.position = new Vector2(/*your code here*/);
+        transform.position = new Vector2(Position.x, Position.y);
     }
 }

@@ -14,7 +14,7 @@ using UnityEngine;
 
 public class MeshManager : MonoBehaviour
 {
-    public MeshFilter meshFilter;
+    private MeshFilter meshFilter;
 
     [HideInInspector]
     public Mesh originalMesh, clonedMesh;

@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &156547610 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3800616816674248104, guid: ce266d2ca2c685444ad1522285b0c6e7, type: 3}
-  m_PrefabInstance: {fileID: 849444639}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &479465929
 GameObject:
   m_ObjectHideFlags: 0
@@ -236,9 +231,9 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 712896490}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a471d096be07a5947873ce4835823c6c, type: 3}
+  m_Script: {fileID: 11500000, guid: 45bd9c1ea763b954c9d079527a333b37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &712896492
@@ -256,25 +251,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &754830347 stripped
-MeshFilter:
-  m_CorrespondingSourceObject: {fileID: 3800616816674248108, guid: ce266d2ca2c685444ad1522285b0c6e7, type: 3}
-  m_PrefabInstance: {fileID: 849444639}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &754830353
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 156547610}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76d52226c4922a540b7aa85ccb049522, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  originalMesh: {fileID: 0}
-  clonedMesh: {fileID: 0}
 --- !u!1001 &849444639
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -291,14 +267,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sonic
       objectReference: {fileID: 0}
-    - target: {fileID: 3800616816674248105, guid: ce266d2ca2c685444ad1522285b0c6e7, type: 3}
-      propertyPath: meshFilter
-      value: 
-      objectReference: {fileID: 754830347}
-    - target: {fileID: 3800616816674248108, guid: ce266d2ca2c685444ad1522285b0c6e7, type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
     - target: {fileID: 3800616816674248109, guid: ce266d2ca2c685444ad1522285b0c6e7, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -343,18 +311,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3800616816674248110, guid: ce266d2ca2c685444ad1522285b0c6e7, type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
-    - target: {fileID: 3800616816674248111, guid: ce266d2ca2c685444ad1522285b0c6e7, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: c9139966f4be99640b063c1a11261ed9, type: 2}
     m_RemovedComponents:
+    - {fileID: 3800616816674248098, guid: ce266d2ca2c685444ad1522285b0c6e7, type: 3}
     - {fileID: 3800616816674248105, guid: ce266d2ca2c685444ad1522285b0c6e7, type: 3}
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: ce266d2ca2c685444ad1522285b0c6e7, type: 3}
+--- !u!1 &849444640 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3800616816674248104, guid: ce266d2ca2c685444ad1522285b0c6e7, type: 3}
+  m_PrefabInstance: {fileID: 849444639}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &849444642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849444640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76d52226c4922a540b7aa85ccb049522, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalMesh: {fileID: 0}
+  clonedMesh: {fileID: 0}
+--- !u!114 &849444643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849444640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e90329dd62668f248bd2278e34eca238, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1029411596
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,7 +365,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!135 &1029411597
 SphereCollider:
   m_ObjectHideFlags: 0
