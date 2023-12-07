@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Util
 {
-    public static float FindDistance(HVector2D p1, HVector2D p2)
+    public static float FindDistance(HVector2D p1, HVector2D p2) // Method to find the distance between 2 points represented by HVector2D objects
     {
-        return Mathf.Sqrt(Mathf.Pow(p2.x - p1.x, 2) + Mathf.Pow(p2.y - p1.y, 2));
+        return Mathf.Sqrt(Mathf.Pow(p2.x - p1.x, 2) + Mathf.Pow(p2.y - p1.y, 2)); // Calculates the Euclidean distance using the the formula and returns the result
     }
 }
