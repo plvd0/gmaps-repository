@@ -53,7 +53,7 @@ public class TransformMesh : MonoBehaviour
 
     private void Transform() // Method to apply the transformation of rotation and/or translation to the Sonic sprite
     {
-        vertices = meshManager.originalMesh.vertices; // Gets the vertices of the originalMesh from the sprite
+        vertices = meshManager.clonedMesh.vertices; // Gets the vertices of the originalMesh from the sprite
 
         for (int i = 0; i < vertices.Length; i++) // Runs a loop through each vertex in the mesh, for Sonic it's 4 since it's a Quad
         {
@@ -62,6 +62,6 @@ public class TransformMesh : MonoBehaviour
             vertices[i].x = vert.x; // Updates the X value of the current vertex with the transformation
             vertices[i].y = vert.y; // Updates the Y value of the current vertex with the transformation
         }
-        meshManager.originalMesh.vertices = vertices; // Updates the vertices with the transformed vertices, applying the transformation
+        meshManager.clonedMesh.vertices = vertices; // Updates the vertices with the transformed vertices, applying the transformation
     }
 }
